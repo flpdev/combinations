@@ -1,0 +1,37 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+.numero-forte {
+    background-color: #33075C;
+    padding: 20px;
+}
+
+.numero-fraco {
+    background-color: #9E56E1;
+    padding: 20px;
+}
+
+.number {
+    border: 2px solid;
+    border-color: #7A12DB;
+    width: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block
+}
+
+.label_white {
+    color: white;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
