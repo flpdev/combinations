@@ -2,7 +2,7 @@
 
     <div class="row">
         <div class="col">
-            <h1>Hi Chico!</h1>
+            <h1>Hello Chico!</h1>
             <hr>
         </div>
     </div>
@@ -245,11 +245,41 @@
                                 <h3>Grupos</h3>
                                 <div class="row">
                                     <div class="col linha">
-                                        <p><b>Grupo A:</b><span> 22, 13 ,01, 07</span></p>
-                                        <p><b>Grupo B:</b><span> 22, 13 ,01, 07</span></p>
-                                        <p><b>Grupo C:</b><span> 22, 13 ,01, 07</span></p>
-                                        <p><b>Grupo D:</b><span> 22, 13 ,01, 07</span></p>
-                                        <p><b>Grupo E:</b><span> 22, 13 ,01, 07</span></p>
+                                        <p><b>Grupo A:</b><span>
+                                                @foreach($grupoA as $key => $num)
+                                                @if($key) - @endif
+                                                {{$num}}
+                                                @endforeach
+                                            </span>
+                                        </p>
+                                        <p><b>Grupo B:</b><span>
+                                                @foreach($grupoB as $key => $num)
+                                                @if($key) - @endif
+                                                {{$num}}
+                                                @endforeach
+                                            </span>
+                                        </p>
+                                        <p><b>Grupo C:</b><span>
+                                                @foreach($grupoC as $key => $num)
+                                                @if($key) - @endif
+                                                {{$num}}
+                                                @endforeach
+                                            </span>
+                                        </p>
+                                        <p><b>Grupo D:</b><span>
+                                                @foreach($grupoD as $key => $num)
+                                                @if($key) - @endif
+                                                {{$num}}
+                                                @endforeach
+                                            </span>
+                                        </p>
+                                        <p><b>Grupo E:</b><span>
+                                                @foreach($grupoE as $key => $num)
+                                                @if($key) - @endif
+                                                {{$num}}
+                                                @endforeach
+                                            </span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -257,16 +287,57 @@
                                 <h3>Combinações</h3>
                                 <div class="row">
                                     <div class="col linha">
-                                        <p><b>AB-C + Fortes: </b></p>
-                                        <p><b>AB-D + Fortes: </b></p>
-                                        <p><b>AB-E + Fortes: </b></p>
-                                        <p><b>AC-D + Fortes: </b></p>
-                                        <p><b>AC-E + Fortes: </b></p>
-                                        <p><b>AD-E + Fortes: </b></p>
-                                        <p><b>BC-D + Fortes: </b></p>
-                                        <p><b>BC-E + Fortes: </b></p>
-                                        <p><b>BD-E + Fortes: </b></p>
-                                        <p><b>CD-E + Fortes: </b></p>
+                                        <p><b>AB-C + Fortes: </b>
+                                            @foreach($combinacao1 as $key => $comb)
+                                            @if($key && $comb) - @endif
+                                            {{$comb}}
+                                            @endforeach
+                                        </p>
+                                        <p><b>AB-D + Fortes: </b>
+                                            @foreach($combinacao2 as $key => $comb)
+                                            @if($key && $comb) - @endif
+                                            {{$comb}}
+                                            @endforeach</p>
+                                        <p><b>AB-E + Fortes: </b>
+                                            @foreach($combinacao3 as $key => $comb)
+                                            @if($key && $comb) - @endif
+                                            {{$comb}}
+                                            @endforeach</p>
+                                        <p><b>AC-D + Fortes: </b>
+                                            @foreach($combinacao4 as $key => $comb)
+                                            @if($key && $comb) - @endif
+                                            {{$comb}}
+                                            @endforeach</p>
+                                        <p><b>AC-E + Fortes: </b>
+                                            @foreach($combinacao5 as $key => $comb)
+                                            @if($key && $comb) - @endif
+                                            {{$comb}}
+                                            @endforeach</p>
+                                        <p><b>AD-E + Fortes: </b>
+                                            @foreach($combinacao6 as $key => $comb)
+                                            @if($key && $comb) - @endif
+                                            {{$comb}}
+                                            @endforeach</p>
+                                        <p><b>BC-D + Fortes: </b>
+                                            @foreach($combinacao7 as $key => $comb)
+                                            @if($key && $comb) - @endif
+                                            {{$comb}}
+                                            @endforeach</p>
+                                        <p><b>BC-E + Fortes: </b>
+                                            @foreach($combinacao8 as $key => $comb)
+                                            @if($key && $comb) - @endif
+                                            {{$comb}}
+                                            @endforeach</p>
+                                        <p><b>BD-E + Fortes: </b>
+                                            @foreach($combinacao9 as $key => $comb)
+                                            @if($key && $comb) - @endif
+                                            {{$comb}}
+                                            @endforeach</p>
+                                        <p><b>CD-E + Fortes: </b>
+                                            @foreach($combinacao10 as $key => $comb)
+                                            @if($key && $comb) - @endif
+                                            {{$comb}}
+                                            @endforeach</p>
                                     </div>
                                 </div>
                             </div>
