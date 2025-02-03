@@ -286,60 +286,81 @@
                             <div class="col">
                                 <h3>Combinações</h3>
                                 <div class="row">
-                                    <div class="col linha">
-                                        <p><b>AB-C + Fortes: </b>
-                                            @foreach($combinacao1 as $key => $comb)
-                                            @if($key && $comb) - @endif
-                                            {{$comb}}
-                                            @endforeach
-                                        </p>
-                                        <p><b>AB-D + Fortes: </b>
-                                            @foreach($combinacao2 as $key => $comb)
-                                            @if($key && $comb) - @endif
-                                            {{$comb}}
-                                            @endforeach</p>
-                                        <p><b>AB-E + Fortes: </b>
-                                            @foreach($combinacao3 as $key => $comb)
-                                            @if($key && $comb) - @endif
-                                            {{$comb}}
-                                            @endforeach</p>
-                                        <p><b>AC-D + Fortes: </b>
-                                            @foreach($combinacao4 as $key => $comb)
-                                            @if($key && $comb) - @endif
-                                            {{$comb}}
-                                            @endforeach</p>
-                                        <p><b>AC-E + Fortes: </b>
-                                            @foreach($combinacao5 as $key => $comb)
-                                            @if($key && $comb) - @endif
-                                            {{$comb}}
-                                            @endforeach</p>
-                                        <p><b>AD-E + Fortes: </b>
-                                            @foreach($combinacao6 as $key => $comb)
-                                            @if($key && $comb) - @endif
-                                            {{$comb}}
-                                            @endforeach</p>
-                                        <p><b>BC-D + Fortes: </b>
-                                            @foreach($combinacao7 as $key => $comb)
-                                            @if($key && $comb) - @endif
-                                            {{$comb}}
-                                            @endforeach</p>
-                                        <p><b>BC-E + Fortes: </b>
-                                            @foreach($combinacao8 as $key => $comb)
-                                            @if($key && $comb) - @endif
-                                            {{$comb}}
-                                            @endforeach</p>
-                                        <p><b>BD-E + Fortes: </b>
-                                            @foreach($combinacao9 as $key => $comb)
-                                            @if($key && $comb) - @endif
-                                            {{$comb}}
-                                            @endforeach</p>
-                                        <p><b>CD-E + Fortes: </b>
-                                            @foreach($combinacao10 as $key => $comb)
-                                            @if($key && $comb) - @endif
-                                            {{$comb}}
-                                            @endforeach</p>
+                                    <div class="row pt-2">
+                                        <div class="col linha">
+                                            <p><b>AB-C + Fortes: </b>
+                                                @foreach($combinacao1 as $key => $comb)
+                                                    @if($key && $comb) - @endif
+                                                    {{$comb}}
+                                                @endforeach
+                                                (Pares: {{ $this->countEvenOddInCombination($combinacao1)['pares'] }}, Ímpares: {{ $this->countEvenOddInCombination($combinacao1)['impares'] }})
+                                            </p>
+                                            <p><b>AB-D + Fortes: </b>
+                                                @foreach($combinacao2 as $key => $comb)
+                                                    @if($key && $comb) - @endif
+                                                    {{$comb}}
+                                                @endforeach
+                                                (Pares: {{ $this->countEvenOddInCombination($combinacao2)['pares'] }}, Ímpares: {{ $this->countEvenOddInCombination($combinacao2)['impares'] }})
+                                            </p>
+                                            <p><b>AB-E + Fortes: </b>
+                                                @foreach($combinacao3 as $key => $comb)
+                                                    @if($key && $comb) - @endif
+                                                    {{$comb}}
+                                                @endforeach
+                                                (Pares: {{ $this->countEvenOddInCombination($combinacao3)['pares'] }}, Ímpares: {{ $this->countEvenOddInCombination($combinacao3)['impares'] }})
+                                            </p>
+                                            <p><b>AC-D + Fortes: </b>
+                                                @foreach($combinacao4 as $key => $comb)
+                                                    @if($key && $comb) - @endif
+                                                    {{$comb}}
+                                                @endforeach
+                                                (Pares: {{ $this->countEvenOddInCombination($combinacao4)['pares'] }}, Ímpares: {{ $this->countEvenOddInCombination($combinacao4)['impares'] }})
+                                            </p>
+                                            <p><b>AC-E + Fortes: </b>
+                                                @foreach($combinacao5 as $key => $comb)
+                                                    @if($key && $comb) - @endif
+                                                    {{$comb}}
+                                                @endforeach
+                                                (Pares: {{ $this->countEvenOddInCombination($combinacao5)['pares'] }}, Ímpares: {{ $this->countEvenOddInCombination($combinacao5)['impares'] }})
+                                            </p>
+                                            <p><b>AD-E + Fortes: </b>
+                                                @foreach($combinacao6 as $key => $comb)
+                                                    @if($key && $comb) - @endif
+                                                    {{$comb}}
+                                                @endforeach
+                                                (Pares: {{ $this->countEvenOddInCombination($combinacao6)['pares'] }}, Ímpares: {{ $this->countEvenOddInCombination($combinacao6)['impares'] }})
+                                            </p>
+                                            <p><b>BC-D + Fortes: </b>
+                                                @foreach($combinacao7 as $key => $comb)
+                                                    @if($key && $comb) - @endif
+                                                    {{$comb}}
+                                                @endforeach
+                                                (Pares: {{ $this->countEvenOddInCombination($combinacao7)['pares'] }}, Ímpares: {{ $this->countEvenOddInCombination($combinacao7)['impares'] }})
+                                            </p>
+                                            <p><b>BC-E + Fortes: </b>
+                                                @foreach($combinacao8 as $key => $comb)
+                                                    @if($key && $comb) - @endif
+                                                    {{$comb}}
+                                                @endforeach
+                                                (Pares: {{ $this->countEvenOddInCombination($combinacao8)['pares'] }}, Ímpares: {{ $this->countEvenOddInCombination($combinacao8)['impares'] }})
+                                            </p>
+                                            <p><b>BD-E + Fortes: </b>
+                                                @foreach($combinacao9 as $key => $comb)
+                                                    @if($key && $comb) - @endif
+                                                    {{$comb}}
+                                                @endforeach
+                                                (Pares: {{ $this->countEvenOddInCombination($combinacao9)['pares'] }}, Ímpares: {{ $this->countEvenOddInCombination($combinacao9)['impares'] }})
+                                            </p>
+                                            <p><b>CD-E + Fortes: </b>
+                                                @foreach($combinacao10 as $key => $comb)
+                                                    @if($key && $comb) - @endif
+                                                    {{$comb}}
+                                                @endforeach
+                                                (Pares: {{ $this->countEvenOddInCombination($combinacao10)['pares'] }}, Ímpares: {{ $this->countEvenOddInCombination($combinacao10)['impares'] }})
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>

@@ -12,8 +12,8 @@ class Numbers extends Component
     public $numeroForte1, $numeroForte2, $numeroForte3;
     public $numeroFraco1, $numeroFraco2;
     public $numerosFortes = [], $numerosFracos = [];
-    public $combinacao1, $combinacao2, $combinacao3, $combinacao4, $combinacao5;
-    public $combinacao6, $combinacao7, $combinacao8, $combinacao9, $combinacao10;
+    public $combinacao1 = [], $combinacao2 = [], $combinacao3 = [], $combinacao4 = [], $combinacao5 = [];
+    public $combinacao6 = [], $combinacao7 = [], $combinacao8 = [], $combinacao9 = [], $combinacao10 = [];
 
     public function render()
     {
@@ -159,4 +159,26 @@ class Numbers extends Component
         $this->combinacao10 = array_merge($this->grupoC, $this->grupoD, $this->grupoE, $this->numerosFortes);
         sort($this->combinacao10);
     }
+
+    public function countEvenOddInCombination($combination)
+    {
+        // Verificar se a combinação não está vazia
+        if (empty($combination)) {
+            return ['pares' => 0, 'impares' => 0];
+        }
+    
+        $pares = 0;
+        $impares = 0;
+    
+        foreach ($combination as $numero) {
+            if ($numero % 2 == 0) {
+                $pares++;
+            } else {
+                $impares++;
+            }
+        }
+    
+        return ['pares' => $pares, 'impares' => $impares];
+    }
+
 }
