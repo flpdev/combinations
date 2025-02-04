@@ -107,3 +107,119 @@ h3, h4 {
 .row {
     margin-top: 20px;
 }
+
+/* Estilos para o Gerador de Jogos */
+
+.gerador-jogos {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.titulo {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.botao-gerar {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.botao-gerar:hover {
+    background-color: #2980b9;
+}
+
+.jogos-gerados {
+    margin-top: 20px;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.lista-jogos {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.item-jogo {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.texto-instrucoes {
+    color: #777;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .gerador-jogos {
+        padding: 15px;
+    }
+
+    .botao-gerar {
+        padding: 14px;
+    }
+
+    .titulo {
+        font-size: 1.4rem;
+    }
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: .25em;
+}
+
+.lista-numeros-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os números */
+    list-style: none;
+    padding: 0;
+}
+
+.item-numero {
+    background-color: #f0f0f0; /* Cor de fundo dos números */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+.botao-gerar.desabilitado {
+    background-color: #cccccc;  /* Cor de fundo mais clara */
+    color: #666666;             /* Cor do texto mais escura */
+    cursor: not-allowed;        /* Altera o cursor para indicar que não é clicável */
+}
+
+.botao-gerar:disabled {
+    pointer-events: none;       /* Previne qualquer evento de clique */
+}

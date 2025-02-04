@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', \App\Http\Livewire\Numbers::class);
-Route::get('/sorteios' , \App\Http\Livewire\SorteioRealtime::class);
+Route::get('/lotofacil-sorteios' , \App\Http\Livewire\SorteioRealtime::class);
+Route::get('/lotofacil-gerador', \App\Http\Livewire\GeradorJogos::class);
+Route::get('/supersete' , \App\Http\Livewire\SorteadorSuperSete::class);

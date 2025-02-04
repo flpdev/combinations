@@ -25,7 +25,7 @@ class SorteioRealtime extends Component
         $anoAtual = Carbon::now()->year;
     
         // Buscar todos os sorteios do ano atual em ordem cronológica
-        $sorteios = Sorteios::whereYear('data', $anoAtual)->orderBy('data', 'asc')->get();
+        $sorteios = Sorteios::whereYear('data', $anoAtual)->orderBy('concurso', 'asc')->get();
     
         $numerosTemporarios = [];
         $concursosTemporarios = [];

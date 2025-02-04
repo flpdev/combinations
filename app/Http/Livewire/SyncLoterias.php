@@ -43,7 +43,6 @@ class SyncLoterias extends Component
         $this->message = 'Dados sincronizados com sucesso!';
 
         } catch (\Exception $e) {
-            dd($e->getMessage());
             $this->message = 'Erro ao conectar com a API: ' . $e->getMessage();
         }
     }

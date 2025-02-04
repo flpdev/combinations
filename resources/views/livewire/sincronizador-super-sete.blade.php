@@ -1,5 +1,7 @@
 <div>
-    <button wire:click="syncData" class="bg-blue-500 text-white p-2 rounded">Sincronizar Dados</button>
+    <button wire:click="sincronizar" class="bg-blue-500 text-white p-2 rounded disabled:opacity-50">
+        Sincronizar Dados
+    </button>
     
     <br>
     <!-- Exibir "Carregando..." enquanto a variável de loading estiver ativa -->
